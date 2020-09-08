@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d6cfc38a-d598-4266-a67c-23000c733b8e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/zheye" />
+  </component>
+  <component name="ProjectId" id="1ct7xlecC7wwTehAWGsBz02tOn7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\scrapy\ArticleSpider" />
+      <recent name="F:\scrapy\ArticleSpider\ArticleSpider\spiders" />
+      <recent name="F:\scrapy\ArticleSpider\tools" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\scrapy\" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ArticleSpider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ArticleSpider/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ArticleSpider/utils/1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="chaojiying" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ArticleSpider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/chaojiying.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ArticleSpider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="selenium_spider" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ArticleSpider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Maya\Envs\article_spider\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/selenium_spider.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ArticleSpider" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ArticleSpider" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ArticleSpider/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.1" />
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.selenium_spider" />
+      <item itemvalue="Python.settings" />
+      <item itemvalue="Python.chaojiying" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.chaojiying" />
+        <item itemvalue="Python.selenium_spider" />
+        <item itemvalue="Python.1" />
+        <item itemvalue="Python.settings" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d6cfc38a-d598-4266-a67c-23000c733b8e" name="Default Changelist" comment="" />
+      <created>1591336284132</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591336284132</updated>
+      <workItem from="1591336290750" duration="1418000" />
+      <workItem from="1591856727429" duration="4251000" />
+      <workItem from="1591949943433" duration="4770000" />
+      <workItem from="1594049804603" duration="20000" />
+      <workItem from="1595153469023" duration="598000" />
+      <workItem from="1595580021074" duration="862000" />
+      <workItem from="1597656084693" duration="10922000" />
+      <workItem from="1597973941642" duration="624000" />
+      <workItem from="1598271266677" duration="49337000" />
+      <workItem from="1598579150139" duration="3618000" />
+      <workItem from="1598587147039" duration="26853000" />
+      <workItem from="1599137177534" duration="628000" />
+      <workItem from="1599452803840" duration="21332000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="220" y="252" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598589356842">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="220" y="252" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1739.939@0.0.1739.939" timestamp="1598589356842" />
+    <state x="161" y="263" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598592721182">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="161" y="263" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1739.939@0.0.1739.939" timestamp="1598592721182" />
+    <state width="1385" height="500" key="DebuggerActiveHint" timestamp="1599533004891">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1223" height="438" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1598519273654" />
+    <state width="1385" height="500" key="DebuggerActiveHint/0.0.1739.939@0.0.1739.939" timestamp="1599533004891" />
+    <state x="487" y="301" key="FileChooserDialogImpl" timestamp="1599539499083">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="746" y="291" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597974790112" />
+    <state x="487" y="301" key="FileChooserDialogImpl/0.0.1739.939@0.0.1739.939" timestamp="1599539499083" />
+    <state width="1320" height="208" key="GridCell.Tab.0.bottom" timestamp="1599542620870">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598520010536" />
+    <state width="1320" height="208" key="GridCell.Tab.0.bottom/0.0.1739.939@0.0.1739.939" timestamp="1599542620870" />
+    <state width="1320" height="208" key="GridCell.Tab.0.center" timestamp="1599542620870">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1598520010536" />
+    <state width="1320" height="208" key="GridCell.Tab.0.center/0.0.1739.939@0.0.1739.939" timestamp="1599542620870" />
+    <state width="1320" height="208" key="GridCell.Tab.0.left" timestamp="1599542620870">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1598520010536" />
+    <state width="1320" height="208" key="GridCell.Tab.0.left/0.0.1739.939@0.0.1739.939" timestamp="1599542620870" />
+    <state width="1320" height="208" key="GridCell.Tab.0.right" timestamp="1599542620870">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1598520010536" />
+    <state width="1320" height="208" key="GridCell.Tab.0.right/0.0.1739.939@0.0.1739.939" timestamp="1599542620870" />
+    <state width="1320" height="208" key="GridCell.Tab.1.bottom" timestamp="1599542620775">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1598520010537" />
+    <state width="1320" height="208" key="GridCell.Tab.1.bottom/0.0.1739.939@0.0.1739.939" timestamp="1599542620775" />
+    <state width="1320" height="208" key="GridCell.Tab.1.center" timestamp="1599542620775">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1598520010537" />
+    <state width="1320" height="208" key="GridCell.Tab.1.center/0.0.1739.939@0.0.1739.939" timestamp="1599542620775" />
+    <state width="1320" height="208" key="GridCell.Tab.1.left" timestamp="1599542620775">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1598520010537" />
+    <state width="1320" height="208" key="GridCell.Tab.1.left/0.0.1739.939@0.0.1739.939" timestamp="1599542620775" />
+    <state width="1320" height="208" key="GridCell.Tab.1.right" timestamp="1599542620775">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="1493" height="222" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1598520010537" />
+    <state width="1320" height="208" key="GridCell.Tab.1.right/0.0.1739.939@0.0.1739.939" timestamp="1599542620775" />
+    <state width="213" height="457" key="HiddenNamespacesPopup" timestamp="1598579795251">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="213" height="457" key="HiddenNamespacesPopup/0.0.1739.939@0.0.1739.939" timestamp="1598579795251" />
+    <state x="-27" y="163" key="SettingsEditor" timestamp="1599539507699">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="381" y="76" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1598495197213" />
+    <state x="-27" y="163" key="SettingsEditor/0.0.1739.939@0.0.1739.939" timestamp="1599539507699" />
+    <state width="483" height="325" key="XDebugger.FullValuePopup" timestamp="1599533004888">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state width="431" height="285" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1591351193640" />
+    <state width="483" height="325" key="XDebugger.FullValuePopup/0.0.1739.939@0.0.1739.939" timestamp="1599533004888" />
+    <state x="40" y="163" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1598494923753">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="40" y="163" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1598494923753" />
+    <state x="112" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598517340712">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="112" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1598517340712" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/pipelines.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/pipelines.py</url>
+          <line>101</line>
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/spiders/cnblogs.py</url>
+          <line>109</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/spiders/cnblogs.py</url>
+          <line>111</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/spiders/lagou.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/spiders/lagou.py</url>
+          <line>76</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/pipelines.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/pipelines.py</url>
+          <line>106</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/pipelines.py</url>
+          <line>107</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/spiders/lagou.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/spiders/lagou.py</url>
+          <line>51</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ArticleSpider/spiders/zhihu.py</url>
+          <line>30</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ArticleSpider$selenium_spider.coverage" NAME="selenium_spider Coverage Results" MODIFIED="1598581399474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/ArticleSpider$common.coverage" NAME="common Coverage Results" MODIFIED="1597733812329" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ArticleSpider/utils" />
+    <SUITE FILE_PATH="coverage/ArticleSpider$cnblogs.coverage" NAME="cnblogs Coverage Results" MODIFIED="1598417102829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ArticleSpider/spiders" />
+    <SUITE FILE_PATH="coverage/ArticleSpider$1.coverage" NAME="1 Coverage Results" MODIFIED="1598508986484" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ArticleSpider/utils" />
+    <SUITE FILE_PATH="coverage/ArticleSpider$settings.coverage" NAME="settings Coverage Results" MODIFIED="1598427715670" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/ArticleSpider" />
+    <SUITE FILE_PATH="coverage/ArticleSpider$chaojiying.coverage" NAME="chaojiying Coverage Results" MODIFIED="1599531713666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/ArticleSpider$main.coverage" NAME="main Coverage Results" MODIFIED="1599542620746" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
