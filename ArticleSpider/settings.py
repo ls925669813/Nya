@@ -11,6 +11,8 @@
 import os
 
 BOT_NAME = 'ArticleSpider'
+BOT_NAME = 'ArticleSpider'
+BOT_NAME = 'ArticleSpider'
 
 SPIDER_MODULES = ['ArticleSpider.spiders']
 NEWSPIDER_MODULE = 'ArticleSpider.spiders'
