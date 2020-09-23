@@ -7,14 +7,35 @@ from scrapy import Request
 from urllib import parse
 import requests
 # from scrapy.loader import ItemLoader
+from selenium import webdriver
+
 from ArticleSpider.items import ArticleItemLoader
-from ArticleSpider.items import cnblogsArticleItem
+from ArticleSpider.items import JobBoleArticleItem
 from ArticleSpider.utils import common
+
+from pydispatch import dispatcher
+from scrapy import signals
 
 class CnblogsSpider(scrapy.Spider):
     name = 'cnblogs'
     allowed_domains = ['news.cnblogs.com']
     start_urls = ['http://news.cnblogs.com/']
+
+    # def __init__(self):
+    #     self.browser = webdriver.Chrome(executable_path="F:\scrapy\ArticleSpider\/tools\chromedriver.exe")
+    #     super(CnblogsSpider, self).__init__()
+    #     dispatcher.connect(self.spider_closed, signals.spider_closed)
+    #
+    # def spider_closed(self, spider):
+    #     #当爬虫推出的时候关闭Chrome
+    #     print("spider closed")
+    #     self.browser.quit()
+
+    #收集所有404的url以及404页面数
+    handle_httpstatus_list = [404]
+    def __init__(self):
+        self.fail_urls = []
+
 
     def parse(self, response):
         """
@@ -23,6 +44,10 @@ class CnblogsSpider(scrapy.Spider):
         :param response:
         :return:
         """
+        if response.status == 404:
+            self.fail_urls.append(response.url)
+            self.crawler.stats.inc_value("failed_url")
+
         post_nodes = response.css('#news_list .news_block')
         for post_node in post_nodes:
             image_url = post_node.css('.entry_summary a img::attr(src)').extract_first("")
@@ -74,7 +99,7 @@ class CnblogsSpider(scrapy.Spider):
         #         article_item["front_image_url"] = []
 
             post_id = match_re.group(1)
-            item_loader = ArticleItemLoader(item=cnblogsArticleItem(), response=response)
+            item_loader = ArticleItemLoader(item=JobBoleArticleItem(), response=response)
             item_loader.add_css("title", "#news_title a::text")
             item_loader.add_css("create_date", "#news_info .time::text")
             item_loader.add_css("content", "#news_content")

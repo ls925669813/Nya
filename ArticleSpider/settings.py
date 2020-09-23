@@ -11,8 +11,7 @@
 import os
 
 BOT_NAME = 'ArticleSpider'
-BOT_NAME = 'ArticleSpider'
-BOT_NAME = 'ArticleSpider'
+
 
 SPIDER_MODULES = ['ArticleSpider.spiders']
 NEWSPIDER_MODULE = 'ArticleSpider.spiders'
@@ -70,13 +69,14 @@ COOKIES_DUBG = True
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'ArticleSpider.pipelines.ArticlespiderPipeline': 300,
+   # 'ArticleSpider.pipelines.ArticlespiderPipeline': 300,
    # 'ArticleSpider.pipelines.MysqlPipeline': 3,
-   'ArticleSpider.pipelines.MysqlTwistedPipeline': 3,
+   # 'ArticleSpider.pipelines.MysqlTwistedPipeline': 3,
    # 'ArticleSpider.pipelines.JsonWithEncodingPipleline': 2,
    # 'ArticleSpider.pipelines.ArticleImagePipeline': 1,
     #下载图片中间管道开启
     # 'scrapy.pipelines.images.ImagesPipeline' : 1
+   'ArticleSpider.pipelines.ElasticsearchPipline': 1,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

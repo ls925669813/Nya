@@ -11,6 +11,8 @@ from scrapy.exporters import JsonItemExporter
 from scrapy.pipelines.images import ImagesPipeline
 import codecs
 from twisted.enterprise import adbapi
+from w3lib.html import remove_tags
+from models.es_types import ArticleType
 
 class ArticlespiderPipeline:
     def process_item(self, item, spider):
@@ -114,5 +116,14 @@ class ArticleImagePipeline(ImagesPipeline):
             for ok,value in results:
                 image_file_path = value["path"]
             item["front_image_path"] = image_file_path
+
+        return item
+
+class ElasticsearchPipline(object):
+    #讲数据写入到es中
+
+    def process_item(self, item, spider):
+        #将item转换为es的数据
+        item.save_to_es()
 
         return item

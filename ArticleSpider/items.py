@@ -3,35 +3,91 @@
 # Define here the models for your scraped items
 #
 # See documentation in:
-# https://docs.scrapy.org/en/latest/topics/items.html
+# http://doc.scrapy.org/en/latest/topics/items.html
+
 import datetime
 import re
 
+import redis
 import scrapy
 from scrapy.loader import ItemLoader
-from scrapy.loader.processors import TakeFirst,Identity,MapCompose,Join
+from scrapy.loader.processors import MapCompose, TakeFirst, Join, Identity
 
-from ArticleSpider.settings import SQL_DATETIME_FORMAT, SQL_DATE_FORMAT
+
+from settings import SQL_DATETIME_FORMAT, SQL_DATE_FORMAT
 
 from w3lib.html import remove_tags
+from models.es_types import ArticleType, LagouJobType
 
+
+from elasticsearch_dsl.connections import connections
+es = connections.create_connection(ArticleType._doc_type.using)
+
+redis_cli = redis.StrictRedis()
 
 class ArticlespiderItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass
 
-class ArticleItemLoader(ItemLoader):
-    default_output_processor = TakeFirst()
+
+def add_jobbole(value):
+    return value+"-bobby"
+
 
 def date_convert(value):
-    match_date = re.match(".*?(\d+.*)", value)
-    if match_date:
-        return match_date.group(1)
+    match_re = re.match(".*?(\d+.*)", value)
+    if match_re:
+        return match_re.group(1)
     else:
-        return "1970-07-01"
+        return "0000-00-00"
 
-class cnblogsArticleItem(scrapy.Item):
+
+def get_nums(value):
+    match_re = re.match(".*?(\d+).*", value)
+    if match_re:
+        nums = int(match_re.group(1))
+    else:
+        nums = 0
+
+    return nums
+
+
+def remove_comment_tags(value):
+    #去掉tag中提取的评论
+    if "评论" in value:
+        return ""
+    else:
+        return value
+
+def return_value(value):
+    return value
+
+def gen_suggests(index, info_tuple):
+    #根据字符串生成搜索建议数组
+    used_words = set()
+    suggests = []
+    for text, weight in info_tuple:
+        if text:
+            #调用es的analyze接口分析字符串
+            words = es.indices.analyze(index="jobbole",
+                                       body={"analyzer": "ik_max_word", "text": "{0}".format(text)})
+            anylyzed_words = set([r["token"] for r in words["tokens"] if len(r["token"])>1])
+            new_words = anylyzed_words - used_words
+        else:
+            new_words = set()
+
+        if new_words:
+            suggests.append({"input":list(new_words), "weight":weight})
+
+    return suggests
+
+class ArticleItemLoader(ItemLoader):
+    #自定义itemloader
+    default_output_processor = TakeFirst()
+
+
+class JobBoleArticleItem(scrapy.Item):
     title = scrapy.Field()
     create_date = scrapy.Field(
         input_processor=MapCompose(date_convert)
@@ -39,6 +95,7 @@ class cnblogsArticleItem(scrapy.Item):
     url = scrapy.Field()
     url_object_id = scrapy.Field()
     front_image_url = scrapy.Field(
+        # input_processor = MapCompose(add_author, add_test), # 测试用
         output_processor=Identity()
     )
     front_image_path = scrapy.Field()
@@ -50,11 +107,11 @@ class cnblogsArticleItem(scrapy.Item):
     )
     content = scrapy.Field()
 
-    def get_sql(self):
-        insert_sql = '''
-                            insert into cnblog_article(title,url,url_object_id,front_image_path,front_image_url,parise_nums,comment_nums,fav_nums,tags,content,create_date)
-                            VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) ON DUPLICATE KEY UPDATE parise_nums=VALUES(parise_nums) 
-                        '''
+    def get_insert_sql(self):
+        insert_sql = """
+            insert into jobbole_article
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) ON DUPLICATE KEY UPDATE content=VALUES(fav_nums)
+        """
         params = (
             self.get("title", ""),
             self.get("url", ""),
@@ -72,18 +129,30 @@ class cnblogsArticleItem(scrapy.Item):
         return insert_sql, params
 
 
-class ZhihuQuestionItem(scrapy.Item):
-    #知乎的问题 Item
-    zhihu_id = scrapy.Field()
-    topics = scrapy.Field()
-    url = scrapy.Field()
-    title = scrapy.Field()
-    content = scrapy.Field()
-    answer_num = scrapy.Field()
-    comments_num = scrapy.Field()
-    watch_user_num = scrapy.Field()
-    click_num = scrapy.Field()
-    crawl_time = scrapy.Field()
+    def save_to_es(self):
+        article = ArticleType()
+        article.title = self['title']
+        article.create_date = self["create_date"]
+        article.content = remove_tags(self["content"])
+        article.front_image_url = self["front_image_url"]
+        if "front_image_path" in self:
+            article.front_image_path = self["front_image_path"]
+        article.praise_nums = self["praise_nums"]
+        article.fav_nums = self["fav_nums"]
+        article.comment_nums = self["comment_nums"]
+        article.url = self["url"]
+        article.tags = self["tags"]
+        article.meta.id = self["url_object_id"]
+
+        article.suggest = gen_suggests(ArticleType._doc_type.index, ((article.title,10),(article.tags, 7)))
+
+        article.save()
+
+        redis_cli.incr("jobbole_count")
+
+        return
+
+
 
 
 class ZhihuAnswerItem(scrapy.Item):
@@ -100,7 +169,7 @@ class ZhihuAnswerItem(scrapy.Item):
     crawl_time = scrapy.Field()
 
     def get_insert_sql(self):
-        # 插入知乎answer表的sql语句
+        #插入知乎question表的sql语句
         insert_sql = """
             insert into zhihu_answer(zhihu_id, url, question_id, author_id, content, parise_num, comments_num,
               create_time, update_time, crawl_time
@@ -133,6 +202,7 @@ def handle_jobaddr(value):
 class LagouJobItemLoader(ItemLoader):
     #自定义itemloader
     default_output_processor = TakeFirst()
+
 
 class LagouJobItem(scrapy.Item):
     #拉勾网职位信息
@@ -190,3 +260,30 @@ class LagouJobItem(scrapy.Item):
         )
 
         return insert_sql, params
+
+    def save_to_es(self):
+        job = LagouJobType()
+        job.title = self.get('title', '')
+        job.create_date = self.get("create_date", "")
+        job.url = self.get("url")
+        job.tags = self.get("tags", "")
+        job.salary = self.get("salary", "")
+        job.job_city = self.get("job_city", "")
+        job.work_years = self.get("work_years", "")
+        job.degree_need = self.get("degree_need", "")
+        job.job_type = self.get("job_type", "")
+        job.publish_time = self.get("publish_time", "")
+        job.job_advantage = self.get("job_advantage", "")
+        job.job_addr = self.get("job_addr", "")
+        job.job_desc = self.get("job_desc", "")
+        job.company_name = self.get("company_name", "")
+        job.company_url = self.get("company_url", "")
+        job.meta.id = self["url_object_id"]
+
+        job.suggest = gen_suggests(ArticleType._doc_type.index, ((job.title,10),(job.tags, 7)))
+
+        job.save()
+
+        redis_cli.incr("lagou_count")
+
+        return

@@ -120,3 +120,14 @@ class RandomUserAgentMiddlware(object):
 
         request.headers.setdefault('User-Agent', get_ua())
         request.headers.setdefault('User-Agent', self.ua.random)
+
+from scrapy.http import HtmlResponse
+import time
+class JSPageMiddleware(object):
+    def process_request(self, request, spider):
+        if spider.name == "cnblogs":
+            spider.browser.get(request.url)
+            time.sleep(3)
+            print("访问:{0}".format(request.url))
+
+            return HtmlResponse(url=spider.browser.current_url, body=spider.browser.page_source, encoding="utf-8", request=request)
